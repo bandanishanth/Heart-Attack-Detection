@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart Attack Detection</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-family: 'Big Shoulders Display', serif;
+		}
+		.price-box {
+			width: 100%;
+			border-radius: 4px;
+			-webkit-box-shadow: 0px 6px 44px -17px rgba(39,125,230,1);
+			-moz-box-shadow: 0px 6px 44px -17px rgba(39,125,230,1);
+			box-shadow: 0px 6px 44px -17px rgba(39,125,230,1);
+			margin: 2rem 0 0;
+			/*padding: 1.5rem 1.5rem 3.5rem;*/
+			padding: 2.5rem 0;
+			box-sizing: border-box;
+			text-align: center;
+			color: #fff;
+			background: rgba(215,115,230,1);
+			background: -moz-linear-gradient(-45deg, rgba(215,115,230,1) 0%, rgba(215,115,230,1) 16%, rgba(39,125,230,1) 100%);
+			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(215,115,230,1)), color-stop(16%, rgba(215,115,230,1)), color-stop(100%, rgba(39,125,230,1)));
+			background: -webkit-linear-gradient(-45deg, rgba(215,115,230,1) 0%, rgba(215,115,230,1) 16%, rgba(39,125,230,1) 100%);
+			background: -o-linear-gradient(-45deg, rgba(215,115,230,1) 0%, rgba(215,115,230,1) 16%, rgba(39,125,230,1) 100%);
+			background: -ms-linear-gradient(-45deg, rgba(215,115,230,1) 0%, rgba(215,115,230,1) 16%, rgba(39,125,230,1) 100%);
+			background: linear-gradient(135deg, rgba(215,115,230,1) 0%, rgba(215,115,230,1) 16%, rgba(39,125,230,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d773e6', endColorstr='#277de6', GradientType=1 );
+		}
+		.price-box h4 {
+			font-size: 2rem;
+			opacity: 0.8;
+			text-transform: uppercase;
+		}
+		.price-box .highlight {
+			font-size: 4rem;
+			font-weight: 700;
+			line-height: 4rem;
+			display: inline-block;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-4 offset-4">
+		<h1 class="text-center">Final Prediction</h1>
+		<div class="price-box">
+			<h4>Prediction</h4>
+			<span class="highlight">{{ prediction }}</span>
+		</div>
+
+		</div>
+
+		</div>
+	</div>
+</body>
+</html>
