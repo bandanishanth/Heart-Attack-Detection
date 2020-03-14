@@ -8,9 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="{{ my_style }}">
 
-  <script type="text/javascript" src="{{ my_script }}"></script>
-
-  <title>Price Prediction</title>
+  <title>Heart Attack Prediction</title>
 </head>
 <body>
   <form id="f" method="POST" action="http://127.0.0.1:5000/knn_predict">
@@ -57,8 +55,8 @@
       <label for="thalassemia"><b>Thalassemia</b></label>
       <input type="text" placeholder=" A blood disorder called thalassemia (3 = normal; 6 = fixed defect; 7 = reversable defect)" name="thalassemia" required>
 
-      <button type="submit" class="predictbtn" onclick="return validate();">
-        Predict
+      <button type="submit" class="predictbtn">
+        Predict with KNN
       </button>
     </div>
   </form>

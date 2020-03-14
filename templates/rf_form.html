@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="stylesheet" type="text/css" href="F:\ML App\app\static\styles\form_style.css">
+  <script type="text/javascript" src="F:\ML App\app\static\scripts\form_script.js"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="{{ my_style }}">
+
+  <title>Heart Attack Prediction</title>
+</head>
+<body>
+  <form id="f" method="POST" action="http://127.0.0.1:5000/rf_predict">
+    <div class="container">
+      <h1>Heart Attack Predictor</h1>
+      <p>Please fill in this form to predict the probability of Heart Attack.</p>
+      <hr>
+      <label for="age"><b>Age</b></label>
+      <input type="text" placeholder="Enter Age" name="age" required>
+
+      <label for="sex"><b>Sex</b></label>
+      <input type="text" placeholder="Enter Sex (1 = Male, 0 = Female)" name="sex" required>
+
+      <label for="chest_pain_type"><b>Chest Pain Type</b></label>
+      <input type="text" placeholder="Enter Chest Pain Type  (Value 1: typical angina, Value 2: atypical angina, Value 3: non-anginal pain, Value 4: asymptomatic)" name="chest_pain_type" required>
+
+      <label for="resting_blood_pressure"><b>Resting Blood Pressure</b></label>
+      <input type="text" placeholder="Enter Resting Blood Pressure" name="resting_blood_pressure" required>
+
+      <label for="cholesterol"><b>Cholesterol</b></label>
+      <input type="text" placeholder="Enter Cholesterol in mg/dl" name="cholesterol" required>
+
+      <label for="fasting_blood_sugar"><b>Fasting Blood_Sugar</b></label>
+      <input type="text" placeholder="Enter Fasting Blood Sugar  (> 120 mg/dl, 1 = true; 0 = false)" name="fasting_blood_sugar" required>
+
+      <label for="rest_ecg"><b>Rest ECG</b></label>
+      <input type="text" placeholder="Enter Rest ECG" name="rest_ecg" required>
+
+      <label for="max_heart_rate_achieved"><b>Max Heart Rate Achieved</b></label>
+      <input type="text" placeholder="Max Heart Rate Achieved" name="max_heart_rate_achieved" required>
+
+      <label for="exercise_induced_angina"><b>Exercise Induced Angina</b></label>
+      <input type="text" placeholder="Exercise Induced Angina" name="exercise_induced_angina" required>
+
+      <label for="st_depression"><b>ST Depression</b></label>
+      <input type="text" placeholder="ST Depression" name="st_depression" required>
+
+      <label for="st_slope"><b>The slope of the peak exercise ST segment</b></label>
+      <input type="text" placeholder="Value 1: upsloping, Value 2: flat, Value 3: downsloping" name="st_slope" required>
+
+      <label for="num_major_vessels"><b>Number of Major Vessels</b></label>
+      <input type="text" placeholder="0-3" name="num_major_vessels" required>
+
+      <label for="thalassemia"><b>Thalassemia</b></label>
+      <input type="text" placeholder=" A blood disorder called thalassemia (3 = normal; 6 = fixed defect; 7 = reversable defect)" name="thalassemia" required>
+
+      <button type="submit" class="predictbtn">
+        Predict with Random Forest
+      </button>
+    </div>
+  </form>
+</body>
+</html>
