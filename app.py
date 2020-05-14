@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 from joblib import load, dump
@@ -124,6 +126,16 @@ def sgd_predict():
     else:
         return render_template('result.html', prediction="Yes")
 
+@app.route("/rf_json_predict",methods=['POST'])
+def rf_json_predict():
+    #print(request.json)
+    #print(pd.DataFrame.from_dict([request.json]).age)
+    prediction = rf_model.predict(pd.DataFrame.from_dict([request.json]))
+    output = prediction[0]
+    if output == 0:
+        return {"Prediction":"No"}
+    else:
+        return {"Prediction":"Yes"}
 
 if __name__ == "__main__":
     app.run(debug=True)
